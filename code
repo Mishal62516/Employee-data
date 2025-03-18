@@ -1,0 +1,31 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.data;
+import java.util.ArrayList;
+import java.util.Scanner;
+/**
+ *
+ * @author HP
+ */
+public class Data {
+
+    public static void main(String[] args) {
+        ArrayList<Employee>employees=new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        employees.add(new Employee("arahm", 500000));
+        employees.add(new Employee("muhammad", 1000000));
+        employees.add(new Employee("ammar", 340000));
+        System.out.println("Employee details :");
+        for (Employee employee : employees) 
+        {
+            employee.displayDetails();
+        }
+          employees.remove(2);
+          System.out.println("Employee after removal :");
+        for (Employee employee : employees) {
+            employee.displayDetails();
+        }
+    }
+}
